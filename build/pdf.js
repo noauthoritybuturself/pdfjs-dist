@@ -1395,6 +1395,10 @@ MessageHandler.prototype = {
   }
 };
 function loadJpegStream(id, imageUrl, objs) {
+  if (/^data:/.test(imageUrl)) {
+  objs.resolve(id, imageUrl);
+  return;
+  }
   var img = new Image();
   img.onload = function loadJpegStream_onloadClosure() {
     objs.resolve(id, img);
