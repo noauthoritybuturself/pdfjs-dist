@@ -14726,7 +14726,17 @@ var CanvasGraphics = function CanvasGraphicsClosure() {
           d = currentTransform[3];
       var heightScale = Math.max(Math.sqrt(c * c + d * d), 1);
       var imgToPaint, tmpCanvas;
-      if ( imgData instanceof window.HTMLElement ||
+	    
+	      
+      	var jsdom = require('jsdom');
+	// Create a fake DOM for testing with $.ajax
+	global.window = new jsdom.JSDOM().window;
+	global.document = window.document;
+	global.HTMLElement = window.HTMLElement;
+	    
+	    
+	    
+      if ( imgData instanceof global.HTMLElement ||
 	  !imgData.data) {
         imgToPaint = imgData;
       } else {
