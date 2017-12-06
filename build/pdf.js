@@ -14727,7 +14727,7 @@ var CanvasGraphics = function CanvasGraphicsClosure() {
       var heightScale = Math.max(Math.sqrt(c * c + d * d), 1);
       var imgToPaint, tmpCanvas;
 	    
-      if (1 === 1) {
+      if (1 === 0) {
         imgToPaint = imgData;
       } else {
         tmpCanvas = this.cachedCanvases.getCanvas('inlineImage', width, height);
