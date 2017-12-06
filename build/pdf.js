@@ -14727,17 +14727,7 @@ var CanvasGraphics = function CanvasGraphicsClosure() {
       var heightScale = Math.max(Math.sqrt(c * c + d * d), 1);
       var imgToPaint, tmpCanvas;
 	    
-	      
-      	var jsdom = require('jsdom');
-	// Create a fake DOM for testing with $.ajax
-	global.window = new jsdom.JSDOM().window;
-	global.document = window.document;
-	global.HTMLElement = window.HTMLElement;
-	    
-	    
-	    
-      if ( imgData instanceof global.HTMLElement ||
-	  !imgData.data) {
+      if (1 === 1) {
         imgToPaint = imgData;
       } else {
         tmpCanvas = this.cachedCanvases.getCanvas('inlineImage', width, height);
